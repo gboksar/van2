@@ -1,0 +1,27 @@
+<?php
+/**
+ * Configuracion Local
+ *
+ * @filesource
+ * @author Pablo Erartes (pabloeuy@gmail.com) / GBoksar/Perro (gustavo@boksar.info)
+ * @package van
+ * @subpackage model
+ * @version 0.1a
+ *
+ */
+$isTEST = false;
+
+if( $isTEST ) {
+	ini_set ('error_reporting', E_ALL);
+	ini_set ('display_errors', 1);
+}else{
+	ini_set ('display_errors', 0);
+}
+
+// Parametros de la DB
+define('DB_HOST', 'localhost');
+define('DB_USER', 'user');
+define('DB_PASS', 'pass');
+define('DATABASE_NAME', 'van');
+
+define('WS_VAN_URL', 'http://ip/van/');
