@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>VANv2.0 - ADAU</title>
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <style>
+            body{font-family: Arial, sans-serif, Helvetica;}
+            br {margin-bottom: 15px;} 
+            .centrado {text-align: center;}
+            .derecha {text-align: right;}
+            .code {font-family: Courier, monospace, serif; font-size: 10pt; margin-left: 80px; margin-right: 80px; padding: 10px 10px 10px 10px; background-color: lightgray;}
+            .sombra { -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75); -moz-box-shadow: 0 0 4px rgba(0,0,0, .75); box-shadow: 0 0 4px rgba(0,0,0, .75);}
+            .redondeado { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+        </style>
+    </head>
+    <body>
+        <div class="centrado">
+            <a href="http://www.adau.com.uy"><img src="/logo_adau.jpg" alt="ADAU - Asoc. de Despachantes de Aduana del Uruguay" title="Haga click aqu&iacute; si desea acceder al portal de la ADAU"/></a>
+            <h1>Bienvenidos al servicio VAN v2.0</h1>
+        </div>
+        <hr style="margin-top: 25px; margin-bottom: 25px;"/>
+        <h2>WEB SEGURA ADAU</h2>
+
+        <h3>XML Despacho:</h3>
+        <div class="code sombra redondeado">
+            &lt;DAE-ADAU&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Documento&gt;<b>219999820013</b>&lt;/Documento&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Intercambio&gt;<b>WS_TELEDES</b>&lt;/Intercambio&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Transaccion&gt;<b>12345678</b>&lt;/Transaccion&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Fecha&gt;<b>17/10/2014T10:30:25</b>&lt;/Fecha&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TipoEnvio&gt;<b>N</b>&lt;TipoEnvio&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;WS&gt;<b>/LuciaWs/awsteledes.aspx</b>&lt;/WS&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Envio&gt;<b>...xml firmado y codificado en base64...</b>&lt;/Envio&gt;<br/>
+            &lt;/DAE-ADAU&gt;
+        </div>
+        <p><b>Nota:</b> Para los casos que el WS de aduana no requiera un n&uacute;mero de transacci&oacute;n, el tag debe venir igual en el XML vac&iacute;o.<p>
+        <p><b>TipoEnvio:</b> Los valores posibles para este tag son:</p>
+        <ul>
+            <li><b>N:</b> Normal, indica al sistema que el env&iacute;o va contra la URI de producci&oacute;n de Aduanas</li>
+            <li><b>P:</b> Prueba, indica al sistema que el el env&iacute;o va contra la URI de pruebas de Aduanas</li>
+        </ul>
+        <p><b>WS:</b> Los valores posibles para este tag son: (Esta lista puede variar)</p>
+        <ul>
+            <li>/LuciaWs/aws_menstock.aspx</li>
+            <li>/LuciaWs/awsarchivadosobre.aspx</li>
+            <li>/LuciaWs/aWSCertOrigen.aspx</li>
+            <li>/LuciaWs/aws_mencor.aspx</li>
+            <li>/LuciaWs/aws_MensManifiesto.aspx</li>
+            <li>/LuciaWs/awsmensimp.aspx</li>
+            <li>/LuciaWs/awspedidocanal.aspx</li>
+            <li>/LuciaWs/awsRespuestaReliquidacion.aspx</li>
+            <li>/LuciaWs/awsteledes.aspx</li>
+            <li>/LuciaWs/awsTramitesDespachante.aspx</li>
+            <li>/LuciaWs/awsviajes.aspx</li>
+        </ul>
+        <hr/>
+        <h3>XML Consulta:</h3>
+        <div class="code sombra redondeado">
+            &lt;DAE-ADAU&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Documento&gt;<b>219999820013</b>&lt;/Documento&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Hash&gt;<b>e9248ac23e185cc2d4b5c7ceb8175d8b</b>&lt;/Hash&gt;<br/>
+            &lt;/DAE-ADAU&gt;
+        </div>
+        <hr/>
+        <h3>XML Respuesta:</h3>
+        <div class="code sombra redondeado">
+            &lt;DAE-ADAU&gt;<br/> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Hash&gt;<b>e9248ac23e185cc2d4b5c7ceb8175d8b</b>&lt;/Hash&gt;<br/> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Fecha&gt;17/10/2014T10:30:25&lt;/Fecha&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Resumen&gt;<b>...XML con res&uacute;men de la operaci&oacute;n</b>&lt;/Resumen&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Respuestas&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Respuesta&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Codigo&gt;<b>0</b>&lt;/Codigo&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Descripcion&gt;<b>Procedimiento Correcto</b>&lt;/Descripcion&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Respuesta&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Respuestas&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;RespuestaDNA&gt;<b>...respuesta recibida del WS de aduana codificada en base64...</b>&lt;/RespuestaDNA&gt;<br/>
+            &lt;/DAE-ADAU&gt;
+        </div>
+        <p><b>Nota:</b> El c&oacute;digo y descripciones de error pueden ser:<p>
+        <ul>
+            <li><b>0:</b> Procedimiento Correcto</li>
+            <li><b>EV01:</b> ERROR INTERNO. PROBLEMAS DE BASE DE DATOS O SISTEMA</li>
+            <li><b>EV02:</b> ERROR: UD NO ESTA AUTORIZADO A CONSULTAR LA TRANSACCION SOLICITADA</li>
+            <li><b>EX01:</b> ERROR: XML RECIBIDO NO TIENE FORMATO VALIDO</li>
+            <li><b>ES01:</b> ERROR: FIRMA DIGITAL MAL FORMADA</li>
+            <li><b>ES02:</b> ERROR: INTEGRIDAD DEL MENSAJE COMPROMETIDA</li>
+            <li><b>ES03:</b> ERROR: FIRMA DIGITAL VENCIDA</li>
+            <li><b>ES04:</b> ERROR: FIRMA DIGITAL NO AUTORIZADA POR ADAU</li>
+            <li><b>EA001:</b> ERROR: EL SERVICIO DE ADUANA ESTA CAIDO, CONSULTE EN UNOS MINUTOS</li>
+            <li><b>EA002:</b> ADUANA NO RESPONDIO EN EL MOMENTO, CONSULTE EN UNOS MINUTOS</li>
+        </ul>
+    </body>
+</html>

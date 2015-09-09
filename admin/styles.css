@@ -1,0 +1,33 @@
+body{font-family: Arial,Helvetica,sans-serif; font-size: 11pt; background-color: white; color: black;}
+h2{background-color: black; color: white; font-size: 1.3em; font-weight: bold; padding: 5px; width: 100%;}
+h4{background-color: #424242; color: white; padding: 3px; margin-bottom: 5px; width: 100%; margin-bottom: 3px; margin-top: 5px;}
+input, select {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75); -moz-box-shadow: 0 0 4px rgba(0,0,0, .75); box-shadow: 0 0 4px rgba(0,0,0, .75);}
+input[type=text], select, input[type=number]{font-size: 1.5em; font-weight: bold; background-color: lightgray; border:1px solid darkslategrey; }
+input[type=text]:focus, select:focus, input[type=number]:focus{background-color: beige; border:1px solid goldenrod;}
+table td{line-height: 11pt;}
+table td{font-size: 9pt;}
+.clickable{color: white; background-color: blue; font-weight: bold; -moz-border-radius: 25px; -webkit-border-radius: 25px; border-radius: 25px; cursor: pointer;}
+.comment{cursor: help;}
+.small{font-size: small;}
+.right{float: right;}
+.mistake{color: red; font-weight: bold;}
+.extraData{background-color: lightgrey; border: 1px solid black;  -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75); -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);  box-shadow: 0 0 1px rgba(0,0,0, .75);}
+#loading {background-color: white; width: 100%; height: 100%; display: block; text-align: center;}
+a.remove_field {color: transparent; text-indent: -3000px; overflow: hidden; margin-left: 5px; background: url('imgs/delete.png') no-repeat top left; width: 25px; height: 25px; }
+.add_field_button{margin-top: 10px; font-weight: bold; cursor: pointer;vertical-align: -15%;}
+.codError{width: 60px;}
+#columns{ height: auto; -webkit-column-count: 3; -moz-column-count: 3; column-count: 3;}
+br{margin-bottom: 10px;}
+input[type=submit]{ color: white; cursor:pointer; padding:5px 25px; text-decoration: none; font-weight: bold; background:#55f; border:1px solid #55a;}
+input[type=submit]:hover{background:#f55; border:1px solid #a55;}
+    
+@media print{
+    body{margin: 0mm 0mm 0mm 0mm; font-size:7pt !important;}
+    table td{font-size: 8pt !important;}
+    a, a:link, a:hover, a:visited {border: none; background-color: white; color: black; font-weight: bold; padding: 5px 5px;  -moz-box-shadow: none;  box-shadow: none; -webkit-box-shadow: none; font-size: 1em;}
+    .no-print, .no-print *{display: none !important;}
+    .extraData{display: block !important;}
+    .extraData img{width: 120px !important;}
+    table td{font-size: 7pt !important;}
+    .small{font-size: 0.8em !important;}
+} 
